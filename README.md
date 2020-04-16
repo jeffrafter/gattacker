@@ -8,9 +8,9 @@ A Node.js package for BLE (Bluetooth Low Energy) Man-in-the-Middle & more.
 
 see:
 
-https://github.com/sandeepmistry/noble
+https://github.com/abandonware/noble
 
-https://github.com/sandeepmistry/bleno
+https://github.com/abandonware/bleno
 
 
 ## Install

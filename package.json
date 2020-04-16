@@ -1,11 +1,11 @@
 {
   "name": "gattacker",
-  "version": "0.2.1",
+  "version": "0.2.1-1",
   "description": "GATTacker",
-  "author": "Slawomir Jasek <slawekj@gmail.com>",
+  "author": "Jin <jin@wemaker.space>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/securing/gattacker"
+    "url": "https://github.com/wemakerspace/gattacker"
   },
   "main": "advertise.js",
   "scripts": {
@@ -28,14 +28,14 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "async": "^2.0.1",
-    "bluetooth-hci-socket" : "^0.4.3",
-    "bplist-parser": "^0.0.6",
-    "colors": "^1.1.2",
-    "debug": "^2.6.9",
-    "env2": "^2.1.0",
-    "glob": "^7.0.5",
-    "ws": "^1.1.1",
-    "node-getopt" : "^0.2.3"
+    "async": "^3.1.0",
+    "@abandonware/bluetooth-hci-socket" : "^0.5.3-3",
+    "bplist-parser": "^0.2.0",
+    "colors": "^1.4.0",
+    "debug": "^4.1.1",
+    "env2": "^2.2.2",
+    "glob": "^7.1.4",
+    "ws": "^7.1.2",
+    "node-getopt" : "^0.3.2"
   }
 }
