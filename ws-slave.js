@@ -69,11 +69,9 @@ function sendEvent(event) {
 
   console.log('ws -> send: '.blue + message);
 
-  var clients = wss.clients;
-
-  for (var i = 0; i < clients.length; i++) {
-    clients[i].send(message);
-  }
+  wss.clients.forEach((client) => {
+    client.send(message);
+  })
 }
 
 noble.on('scanStop', function(){
