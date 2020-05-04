@@ -21,31 +21,31 @@ npm install gattacker
 
 ## Usage
 
-### Configure 
+### Configure
 
 Running both components Set up variables in config.env:
 
-* NOBLE_HCI_DEVICE_ID : noble ("central", ws-slave) device
+* NOBLE_HCI_DEVICE_ID : noble ("central", ws-server) device
 * BLENO_HCI_DEVICE_ID : bleno ("peripheral", advertise) device
 
 If you run "central" and "peripheral" modules on separate boxes with just one BT4 interface, you can leave the values commented.
 
 
-* WS_SLAVE : IP address of ws-slave box
-* DEVICES_PATH : path to store json files 
+* WS_SERVER : IP address of ws-server box
+* DEVICES_PATH : path to store json files
 
-### Start "central" device 
+### Start "central" device
 
 ```sh
-sudo node ws-slave
+sudo node ws-server
 ```
 Connects to targeted peripheral and acts as websocket server.
 
 
-Debug: 
+Debug:
 
 ```sh
-DEBUG=ws-slave sudo node ws-slave
+DEBUG=ws-server sudo node ws-server
 ```
 
 ### Scanning
@@ -55,7 +55,7 @@ DEBUG=ws-slave sudo node ws-slave
 ```sh
 node scan
 ```
-Without parameters scans for broadcasted advertisements, and records them as json files (.adv.json) in DEVICES_PATH 
+Without parameters scans for broadcasted advertisements, and records them as json files (.adv.json) in DEVICES_PATH
 
 
 #### Explore services and characteristics
@@ -63,7 +63,7 @@ Without parameters scans for broadcasted advertisements, and records them as jso
 ```sh
 node scan <peripheral>
 ```
-Explore services and characteristics of chosen peripheral. 
+Explore services and characteristics of chosen peripheral.
 Saves the explored service structure in json file (.srv.json) in DEVICES_PATH.
 
 
@@ -100,7 +100,7 @@ Example:
 
 Functions:
 
-<dynamic|static><Write|Read|Notify> 
+<dynamic|static><Write|Read|Notify>
 
  dynamic: connect to original device
 
@@ -113,14 +113,14 @@ staticValue - static value
 
 
 
-### Start "peripheral" device 
+### Start "peripheral" device
 
 ```sh
 node advertise -a <advertisement_json_file> [ -s <services_json_file> ]
 ```
 
-It connects via websocket to ws-slave in order to forward requests to original device.
-Static run (-s) sets services locally, does not connect to ws-slave. You have to configure the hooks properly.
+It connects via websocket to ws-server in order to forward requests to original device.
+Static run (-s) sets services locally, does not connect to ws-server. You have to configure the hooks properly.
 
 ## MAC address cloning
 
@@ -154,7 +154,7 @@ Turn off, cross fingers, try again ;)
 hciconfig <hci_interface> reset
 ```
 
-### Running ws-slave and advertise on the same box
+### Running ws-server and advertise on the same box
 
 With this configuration you may experience various problems.
 

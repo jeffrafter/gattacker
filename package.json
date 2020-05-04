@@ -11,7 +11,7 @@
   "scripts": {
     "advertise": "node advertise.js",
     "scan": "node scan.js",
-    "ws-slave": "node ws-slave.js"
+    "ws-server": "node ws-server.js"
   },
   "keywords": [
     "bluetooth",
