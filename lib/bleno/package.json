@@ -38,12 +38,12 @@
   },
   "dependencies": {
     "debug": "^2.2.0",
-    "@abandonware/bluetooth-hci-socket": "^0.5.3-3",
+    "bluetooth-hci-socket": "npm:@abandonware/bluetooth-hci-socket@^0.5.3-5",
     "bplist-parser": "0.0.6",
     "xpc-connection": "~0.1.4"
   },
   "optionalDependencies": {
-    "@abandonware/bluetooth-hci-socket": "^0.5.3-3",
+    "bluetooth-hci-socket": "npm:@abandonware/bluetooth-hci-socket@^0.5.3-5",
     "bplist-parser": "0.0.6",
     "xpc-connection": "~0.1.4"
   },
